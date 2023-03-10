@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  padding: 0rem 15rem;
+}
+
+header .logo h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+header .banner{
+  max-width: 60%;
+}
+header .banner img {
+  max-width: 100%;
+  height: auto;
+}
