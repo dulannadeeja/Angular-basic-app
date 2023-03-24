@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  isRecipe:boolean=true;
+  isShoppingList:boolean=false;
 }

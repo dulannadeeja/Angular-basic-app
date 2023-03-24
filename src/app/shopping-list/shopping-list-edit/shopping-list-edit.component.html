@@ -1,1 +1,36 @@
-<p>shopping-list-edit works!</p>
+<form>
+  <div class="row pb-2">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="ingredient">Ingredient:</label>
+        <input type="text" id="ingredient" name="ingredient" class="form-control" #ingredientNameInput>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <div class="input-group">
+          <input type="number" id="amount" name="amount" class="form-control" #ingredientAmountInput>
+          <div class="input-group-append">
+            <select class="form-control" id="unit" name="unit" #ingredientUnitInput>
+              <option value="">--Select unit--</option>
+              <option value="g">g</option>
+              <option value="kg">kg</option>
+              <option value="ml">ml</option>
+              <option value="L">L</option>
+              <option value="oz">oz</option>
+              <option value="lb">lb</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row pb-4">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-primary" (click)="onIngredientAdd()">Add</button>
+      <button type="button" class="btn btn-danger m-3" (click)="onIngredientDelete()">Delete</button>
+      <button type="button" class="btn btn-warning"(click)="onIngredientClear()">Clear</button>
+    </div>
+  </div>
+</form>

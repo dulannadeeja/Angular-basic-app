@@ -1,9 +1,12 @@
-<app-header></app-header>
+<app-header
+  (recipeClickEvent)="isRecipe = true; isShoppingList = false"
+  (shoppingListClickEvent)="isShoppingList = true; isRecipe = false"
+></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="isRecipe===true"></app-recipes>
+      <app-shopping-list *ngIf="isShoppingList===true"></app-shopping-list>
     </div>
   </div>
 </div>
