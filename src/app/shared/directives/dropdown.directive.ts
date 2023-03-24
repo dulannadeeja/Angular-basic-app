@@ -4,10 +4,9 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, TemplateRef } 
   selector: "[appDropdown]"
 })
 export class AppDropdownDirective{
-  @HostBinding('class.open') open: boolean=false;
+  @HostBinding('class.show') show: boolean=false;
   @HostListener('click') hostClick():void{
-    this.open=!this.open;
+    this.show=!this.show;
   }
-
   constructor(private _elementRef:ElementRef){}
 }

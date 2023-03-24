@@ -3,19 +3,13 @@
 </div>
 <div class="row">
   <div class="dropdown" appDropdown>
-    <button
-      class="btn btn-secondary dropdown-toggle"
-      type="button"
-      id="dropdownMenuButton1"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      Dropdown button
+    <button class="dropdown-toggle" type="button">
+      Manage Recipe
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <ul class="dropdown-menu">
+      <li><a href="#" (click)="onAddedShoppingList()">to shopping list</a></li>
+      <li><a href="#">edit recipe</a></li>
+      <li><a href="#">delete recipe</a></li>
     </ul>
   </div>
 </div>
@@ -25,7 +19,10 @@
   </p>
 </div>
 <div class="row">
-  <p class="recipe-ingrediantes">
-    ingrediants
-  </p>
+  <ul id="recipe-ingrediantes-list" class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let ingredient of recipe.ingredient">
+      {{ingredient.name}}
+      <span class="badge bg-primary rounded-pill">{{ingredient.amount+ingredient.unit}}</span>
+    </li>
+  </ul>
 </div>
