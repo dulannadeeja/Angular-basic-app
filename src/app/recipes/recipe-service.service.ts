@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import Recipe from './recipe.model';
 import Ingredient from '../shared/ingredient.model';
 
@@ -8,8 +8,6 @@ import Ingredient from '../shared/ingredient.model';
 export class RecipeService {
 
   private recipeList: Recipe[] = [];
-
-  onRecipeClickedEvent: EventEmitter<Recipe>=new EventEmitter<Recipe>();
 
   constructor() {
     this.recipeList = [new Recipe(1, "test recipe-01", "recipe discription goes here", "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg",[new Ingredient('karabunati',10,'g')]),
@@ -21,6 +19,10 @@ export class RecipeService {
 
   get recipes(): Recipe[] {
     return this.recipeList.slice(0, this.recipeList.length);
+  }
+
+  findRecipeById(id: number): Recipe|undefined{
+    return this.recipeList.find(recipe => recipe.recipeId === id)
   }
 
 }

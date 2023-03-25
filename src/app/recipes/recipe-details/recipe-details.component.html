@@ -7,9 +7,9 @@
       Manage Recipe
     </button>
     <ul class="dropdown-menu">
-      <li><a href="#" (click)="onAddedShoppingList()">to shopping list</a></li>
-      <li><a href="#">edit recipe</a></li>
-      <li><a href="#">delete recipe</a></li>
+      <li><a [routerLink]="" (click)="onAddedShoppingList()">to shopping list</a></li>
+      <li><a [routerLink]="['edit']">edit recipe</a></li>
+      <li><a [routerLink]="">delete recipe</a></li>
     </ul>
   </div>
 </div>

@@ -3,13 +3,6 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7 p-5">
-    <app-recipe-details
-      *ngIf="clickedRecipe; else infoText"
-      [recipe]="clickedRecipe"
-    >
-    </app-recipe-details>
-    <ng-template #infoText>
-      click on one of a recipe in the list to view the recipe details!
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>

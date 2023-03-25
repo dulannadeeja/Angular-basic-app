@@ -1,7 +1,7 @@
 <div class="row p-5">
   <div class="row">
     <div class="col-xs-6">
-      <button class="btn btn-success mb-2">Add recipe</button>
+      <button class="btn btn-success mb-2 px-5 py-2" [routerLink]="['new']">New Recipe</button>
     </div>
   </div>
   <app-recipe-item *ngFor="let recipe of recipeList" [recipe]="recipe"></app-recipe-item>

@@ -15,11 +15,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.collapse]="isCollapsed" (window:resize)="isCollapsed = true">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" (click)="onRecipeClick()">
-          <a class="nav-link active" aria-current="page" href="#">Recipes</a>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" [routerLink]="['recipes']" [routerLinkActive]="'active'">Recipes</a>
         </li>
-        <li class="nav-item" (click)="onShoppingListClick()">
-          <a class="nav-link" href="#">Shopping List</a>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['shopping-list']" routerLinkActive="active">Shopping List</a>
         </li>
       </ul>
       <ul class="nav-item dropdown navbar-right">
